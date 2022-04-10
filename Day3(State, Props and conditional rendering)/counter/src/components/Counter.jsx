@@ -24,7 +24,7 @@ import React from 'react';
 
   return (
     <>
-    <h1>Counter</h1>
+    <h1 >Counter</h1>
     <h2>{counter}</h2>
     <button onClick={()=>handelIncrement(1)}>Add</button>
     <button onClick={()=> handelIncrement(-1)} >Reduse</button>
