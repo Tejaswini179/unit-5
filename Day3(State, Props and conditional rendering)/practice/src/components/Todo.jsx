@@ -1,7 +1,5 @@
 import React from "react";
 import { TaskItem } from "./taskItem";
-
-
  function Todo(){
      const [query,setQuery] = React.useState("");
      const [tasks, setTask] = React.useState([]);
@@ -20,9 +18,7 @@ import { TaskItem } from "./taskItem";
      }
 
      console.log(tasks)
-
-
- return(
+return(
     <div>
     <h1>ToDo</h1>
         <div>

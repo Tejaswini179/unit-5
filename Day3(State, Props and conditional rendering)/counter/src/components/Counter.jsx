@@ -11,13 +11,9 @@ import React from 'react';
       return;
   }
     setCounter(counter + value)
-     
+} 
   
-    
-  }
-
-
-  const handelMult =(value)=>{
+     const handelMult =(value)=>{
     setCounter(counter*value)
   }
 
