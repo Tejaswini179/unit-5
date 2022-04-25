@@ -1,4 +1,43 @@
+import { useState } from "react";
+
 export const Admin = () => {
+  
+    const [formData, setFormData] = useState({
+        employee_name: '',
+            employee_id: '',
+            title: '',
+            salary: 0,
+            image: "",
+            username: "",
+            password: "",
+            tasks: [""],
+        status: "",
+        team: ""
+      });
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+    
+        setFormData({
+          ...formData,
+          [name]:value,
+        })
+      };
+    
+      const handleSubmit = (e) => {
+       e.preventDefault()
+        fetch("http://localhost:8080/employee", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            });
+      
+        
+        }
+    
+
     return (
       <form className="createEmployee">
         <input type="text" placeholder="Employee Name" name="employee_name" />
